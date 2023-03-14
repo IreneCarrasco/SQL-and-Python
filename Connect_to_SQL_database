@@ -1,0 +1,12 @@
+pip install pymysql (pymysql, psycopg2, or sqlite3)
+
+import pymysql
+
+conn = pymysql.connect(
+    host='localhost', # host: the hostname or IP address of the MySQL server
+    user='root', # user: the username used to authenticate with the MySQL server
+    password='password', # password: the password used to authenticate with the MySQL server
+    db='mydatabase', # db: the name of the database to connect to
+    charset='utf8mb4', # charset: the character set to use for the connection
+    cursorclass=pymysql.cursors.DictCursor # cursorclass: the type of cursor to use for the connection (in this case, we use the DictCursor cursor, which returns rows as dictionaries)
+)
